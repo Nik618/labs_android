@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+User <|-- Order
+
+enum Role {
+USER
+ADMIN
+}
+
+enum Status {
+NEW
+PROCESS
+DONE
+}
+
+class User {
+String login
+String password
+Role role
+size()
+}
+
+class Order {
+Date date
+User user
+Status status
+size()
+}
+
+
+@enduml
